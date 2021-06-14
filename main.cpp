@@ -81,24 +81,28 @@ string ans_5(string a){
 	return r;
 }
 
-string report(string& q1, string& q2, string& q3, string& q4, string& q5){
-string r1,r2,r3,r4,r5;
-r1=q1; r2=q2; r3=q3; r4=q4; r5=q5;
+string report(string& q1, string& q2, string& q3, string& q4, string& q5, string& q6, string& q7, string& q8, string& q9, string& q10, string& q11, string& q12, string& q13, string& q14){
+string r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14;
+r1=q1; r2=q2; r3=q3; r4=q4; r5=q5; r6=q6; r7=q7; r8=q8; r9=q9; r10=q10; r11=q11; r12=q12; r13=q13; r14=q14;
 
 system("CLS");
 t6();cout<<"Personal Survey Details\n";
 t1();t1();t1();t1();vh();t6();
 n3();
-t1();vl();t1();cout<<"Full Name : "<<r1<<" "<<r2<<"\n";
-t1();vl();t1();cout<<"Age       : "<<r3<<"\n";
-t1();vl();t1();cout<<"Profession: "<<r4<<"\n";
-t1();vl();t1();cout<<"Country   : "<<r5<<"\n";
+t1();vl();t1();cout<<"Full Name 		: "<<r1<<" "<<r2;  t1();cout<<"Sex       		: "<<r5<<"\n";
+t1();vl();t1();cout<<"Profession		: "<<r4;           t1();cout<<"Age       		: "<<r3<<"\n";
+t1();vl();t1();cout<<"Date of Birth   	: "<<r13;          t1();cout<<"Blood Group   	: "<<r10<<"\n";
+t1();vl();t1();cout<<"Institute    		: "<<r11;          t1();cout<<"Degree    		: "<<r9<<"\n";
+t1();vl();t1();cout<<"Address   		: "<<r7;           t1();cout<<"Email   		    : "<<r12<<"\n";
+t1();vl();t1();cout<<"Phone Number   	: "<<r14;
+t1();vl();t1();cout<<"Hobby     		: "<<r6<<"\n";
+t1();vl();t1();cout<<"Favourite Food	: "<<r8<<"\n";
 
 n3();
 n3();
 t6();cout<<"Created by Rafiul Omar | 2021-06-14. ";
 
-return r1,r2,r3,r4,r5;
+return r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14;
 }
 
 
