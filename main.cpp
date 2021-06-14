@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 
@@ -18,7 +19,7 @@ void t1(void){
 }
 
 void vh(void){
-	cout<<"---------------------------------------------------------";
+	cout<<"-------------------------------------------------------------------";
 }
 
 void vl(void){
@@ -85,13 +86,17 @@ string r1,r2,r3,r4,r5;
 r1=q1; r2=q2; r3=q3; r4=q4; r5=q5;
 
 system("CLS");
-t6();cout<<"Personal Survey Details";
-vh();
+t6();cout<<"Personal Survey Details\n";
+t1();t1();t1();t1();vh();t6();
 n3();
-t6();vl();t1();cout<<"Full Name : "<<r1<<" "<<r2<<"\n";
-t6();vl();t1();cout<<"Age       : "<<r3<<"\n";
-t6();vl();t1();cout<<"Profession: "<<r4<<"\n";
-t6();vl();t1();cout<<"Country   : "<<r5<<"\n";
+t1();vl();t1();cout<<"Full Name : "<<r1<<" "<<r2<<"\n";
+t1();vl();t1();cout<<"Age       : "<<r3<<"\n";
+t1();vl();t1();cout<<"Profession: "<<r4<<"\n";
+t1();vl();t1();cout<<"Country   : "<<r5<<"\n";
+
+n3();
+n3();
+t6();cout<<"Created by Rafiul Omar | 2021-06-14. ";
 
 return r1,r2,r3,r4,r5;
 }
@@ -107,8 +112,15 @@ int main(){
 	system("CLS");
 	welcome();
 	n3();
+point_1:
 	question_1();
 	getline(cin, q1);
+	if (q1.empty()){
+		system("CLS");
+		welcome();
+		n3();
+		goto point_1;
+	}
 	an1 = ans_1(q1);
 
 
@@ -116,8 +128,15 @@ int main(){
 	system("CLS");
 	welcome();
 	n3();
+point_2:
 	question_2();
 	getline(cin, q2);
+	if(q2.empty()){
+		system("CLS");
+		welcome();
+		n3();
+		goto point_2;
+	}
 	an2 = ans_2(q2);
 	
 
@@ -125,8 +144,15 @@ int main(){
 	system("CLS");
 	welcome();
 	n3();
+point_3:
 	question_3();
 	getline(cin, q3);
+	if(q3.empty()){
+		system("CLS");
+		welcome();
+		n3();
+		goto point_3;
+	}
 	an3 = ans_3(q3);
 
 
@@ -134,8 +160,15 @@ int main(){
 	system("CLS");
 	welcome();
 	n3();
+point_4:
 	question_4();
 	getline(cin, q4);
+	if(q4.empty()){
+		system("CLS");
+		welcome();
+		n3();
+		goto point_4;
+	}
 	an4 = ans_4(q4);
 
 
@@ -143,8 +176,15 @@ int main(){
 	system("CLS");
 	welcome();
 	n3();
+point_5:
 	question_5();
 	getline(cin, q5);
+	if(q5.empty()){
+		system("CLS");
+		welcome();
+		n3();
+		goto point_5;
+	}
 	an5 = ans_5(q5);
 
 
