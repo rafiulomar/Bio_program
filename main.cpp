@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 
@@ -153,10 +154,9 @@ r1=q1; r2=q2; r3=q3; r4=q4; r5=q5; r6=q6; r7=q7; r8=q8; r9=q9; r10=q10; r11=q11;
 
 system("CLS");
 t6();cout<<"Personal Survey Details\n";
-t1();t1();t1();t1();vh();t6();
 n3();
-t1();vl();t1();cout<<"Full Name------------: "<<r1<<" "<<r2;
-t1();t1();t1();vl();t1();cout<<"e-mail---------------: "<<r12<<"\n";
+t1();vl();t1();cout<<"Full Name------------: "<<r1<<" "<<r2<<"\n";
+t1();vl();t1();cout<<"e-mail---------------: "<<r12<<"\n";
 t1();vl();t1();cout<<"Institute------------: "<<r11<<"\n";
 t1();vl();t1();cout<<"Phone Number---------: "<<r14<<"\n";
 t1();vl();t1();cout<<"Sex------------------: "<<r9<<"\n";
@@ -175,8 +175,55 @@ n3();
 n3();
 t6();cout<<"Created by Rafiul Omar | 2021-06-14. ";
 
+system("pause");
+system("CLS");
+
+point_15:
+t6();cout<<"Personal Survey Details\n";
+cout<<"Do you want to export your information in text ?[y/n] : ";
+
+string z;
+getline(cin, z);
+
+if (q1.empty()){
+		system("CLS");
+		n3();
+		goto point_15;
+	}
+
+
+if( z =="y" || z == "Y"){
+	ofstream myfile("Data.txt");
+if (myfile.is_open()){
+myfile<<"\t\t\t\t\t\tPersonal Survey Details\n\n\n\n"
+<<"Full Name------------: "<<r1<<" "<<r2<<"\n"
+<<"e-mail---------------: "<<r12<<"\n"
+<<"Institute------------: "<<r11<<"\n"
+<<"Phone Number---------: "<<r14<<"\n"
+<<"Sex------------------: "<<r9<<"\n"
+<<"Age------------------: "<<r3<<"\n"
+<<"Profession-----------: "<<r4<<"\n"
+<<"Blood Group----------: "<<r10<<"\n"
+<<"Degree---------------: "<<r9<<"\n"
+<<"Date of Birth--------: "<<r13<<"\n"
+<<"Country--------------: "<<r5<<"\n"
+<<"Address--------------: "<<r7<<"\n"
+<<"Hobby----------------: "<<r6<<"\n"
+<<"Favourite Food-------: "<<r8<<"\n"
+<<"\n\n\n\n\n\n\n\t\t\t\t\t\tCreated by Rafiul Omar | 2021-06-14.";
+
+myfile.close();
+
+	}
+}
+
+
+
+
 return r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14;
 }
+
+
 
 
 int main(){
@@ -411,5 +458,6 @@ point_14:
 
 	report(an1, an2, an3, an4, an5, an6, an7,an8, an9, an10, an11, an12, an13, an14);
 
+ 	system("exit");
 	return 0;
 }
